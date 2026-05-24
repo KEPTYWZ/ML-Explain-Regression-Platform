@@ -1,14 +1,20 @@
 # 🤖 机器学习回归分析平台
 
+<div align="center">
+  <img src="images/01-main-interface.png" alt="应用主界面" width="800"/>
+  <p><i>简洁直观的用户界面，从数据导入到模型部署的完整工作流程</i></p>
+</div>
+
 一个功能完整的**通用机器学习回归分析平台**，基于Streamlit构建，提供从数据导入到模型部署的完整工作流程。
 
-**适用场景：**
-- 🏗️ 混凝土抗压强度预测
-- 🔩 锈蚀预应力混凝土承载力分析
-- 🏭 材料性能预测
-- 📊 工程参数回归分析
-- 🔬 科研数据建模
-- 📈 任何数值型回归预测任务
+## 🎯 适用场景
+
+- 🏗️ **混凝土抗压强度预测** - 建筑材料性能分析
+- 🔩 **锈蚀预应力混凝土承载力分析** - 结构安全评估
+- 🏭 **材料性能预测** - 新材料研发与测试
+- 📊 **工程参数回归分析** - 工程数据建模
+- 🔬 **科研数据建模** - 实验数据分析与预测
+- 📈 **任何数值型回归预测任务** - 通用回归分析
 
 ## 📋 系统要求
 
@@ -34,6 +40,98 @@ shap: 0.42.0
 ```
 
 详细依赖列表请查看 `requirements.txt`
+
+---
+
+## 📸 功能展示
+
+### 1️⃣ 数据导入与可视化
+
+<div align="center">
+  <img src="images/02-data-distribution.png" alt="数据分布可视化" width="750"/>
+  <p><i>特征分布云雨图 - 直观展示每个特征的分布特征和异常值</i></p>
+</div>
+
+### 2️⃣ 数据预处理
+
+<div align="center">
+  <img src="images/03-data-preprocessing.png" alt="数据预处理" width="750"/>
+  <p><i>智能数据预处理 - 缺失值处理、异常值检测、共线性分析</i></p>
+</div>
+
+### 3️⃣ 自定义特征工程
+
+<div align="center">
+  <img src="images/04-feature-engineering.png" alt="特征工程" width="750"/>
+  <p><i>灵活的特征工程 - 支持自定义特征转换和组合</i></p>
+</div>
+
+### 4️⃣ 模型训练与对比
+
+<div align="center">
+  <img src="images/06-model-comparison.png" alt="模型性能对比" width="650"/>
+  <p><i>多模型性能对比 - 雷达图直观展示各模型在多个指标上的表现</i></p>
+</div>
+
+<div align="center">
+  <img src="images/07-results-visualization.png" alt="结果可视化" width="750"/>
+  <p><i>详细的性能指标 - R²、RMSE、MAE等多维度评估</i></p>
+</div>
+
+### 5️⃣ 贝叶斯优化
+
+<div align="center">
+  <img src="images/08-optimization-process.png" alt="优化过程" width="750"/>
+  <p><i>智能超参数优化 - 可视化展示优化过程和收敛情况</i></p>
+</div>
+
+### 6️⃣ 预测结果分析
+
+<div align="center">
+  <img src="images/09-prediction-results.png" alt="预测结果" width="750"/>
+  <p><i>预测结果可视化 - 训练集/测试集预测散点图和残差分布</i></p>
+</div>
+
+### 7️⃣ SHAP可解释性分析
+
+<div align="center">
+  <img src="images/10-shap-summary.png" alt="SHAP Summary" width="700"/>
+  <p><i>SHAP Summary Plot - 展示每个特征对预测结果的影响</i></p>
+</div>
+
+<div align="center">
+  <img src="images/11-shap-importance.png" alt="SHAP特征重要性" width="700"/>
+  <p><i>特征重要性排序 - 识别关键影响因素</i></p>
+</div>
+
+### 8️⃣ 高级分析功能
+
+<div align="center">
+  <img src="images/12-pdp-analysis.png" alt="PDP分析" width="600"/>
+  <p><i>部分依赖图(PDP) - 分析单个特征对预测的边际效应</i></p>
+</div>
+
+<div align="center">
+  <img src="images/13-ice-analysis.png" alt="ICE分析" width="700"/>
+  <p><i>个体条件期望图(ICE) - 展示特征变化对个体预测的影响</i></p>
+</div>
+
+<div align="center">
+  <img src="images/14-coupling-analysis.png" alt="双因素耦合分析" width="750"/>
+  <p><i>双因素耦合效应 - 分析特征间的交互作用</i></p>
+</div>
+
+### 9️⃣ 符号回归（遗传编程）
+
+<div align="center">
+  <img src="images/15-gp-interface.png" alt="符号回归界面" width="750"/>
+  <p><i>符号回归配置 - 自动发现数学公式</i></p>
+</div>
+
+<div align="center">
+  <img src="images/16-gp-results.png" alt="符号回归结果" width="750"/>
+  <p><i>GP符号回归6图全景 - 适应度进化、收敛分析、种群多样性等</i></p>
+</div>
 
 ---
 
@@ -89,20 +187,7 @@ shap: 0.42.0
   - 预测散点图
   - 训练时间对比
 
-### 5️⃣ 模型可解释性（SHAP）
-- SHAP值分析
-- 特征重要性排序
-- 依赖图（Dependence Plot）
-- 瀑布图（Waterfall Plot）
-- 力图（Force Plot）
-- 自定义样本数
-
-### 6️⃣ 高级分析功能
-- 部分依赖图（PDP）
-- 双因素耦合效应分析
-- 特征交互分析
-
-### 7️⃣ 符号回归（遗传编程）
+### 5️⃣ 符号回归（遗传编程）
 - 自动发现数学公式
 - 遗传编程算法（gplearn）
 - 公式数学格式显示
@@ -113,7 +198,20 @@ shap: 0.42.0
   - 种群多样性分析
   - 帕累托前沿
   - 遗传算子效果
-- 智能优化建议  
+- 智能优化建议
+
+### 6️⃣ 模型可解释性（SHAP）
+- SHAP值分析
+- 特征重要性排序
+- 依赖图（Dependence Plot）
+- 瀑布图（Waterfall Plot）
+- 力图（Force Plot）
+- 自定义样本数
+
+### 7️⃣ 高级分析功能
+- 部分依赖图（PDP）
+- 双因素耦合效应分析
+- 特征交互分析
 
 ## 🚀 快速开始
 
